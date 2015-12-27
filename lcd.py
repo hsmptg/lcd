@@ -5,7 +5,7 @@ lcd = ssd1306.SSD1306()
 
 lcd.clear()
 lcd.display(True)
-lcd.invert(False)
+#lcd.invert(False)
 
 lcd.printat(0, 0, 'IP: 192.168.102.123')
 
