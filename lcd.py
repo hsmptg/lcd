@@ -13,4 +13,6 @@ lcd.print2at(2, 2, 'X: 123')
 lcd.print2at(4, 2, 'Y:  34')
 lcd.print2at(6, 2, 'Z: 240')
 
+time.sleep(3)
+
 lcd.close()

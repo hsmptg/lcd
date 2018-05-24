@@ -2,8 +2,8 @@ import font
 import spidev
 import RPi.GPIO as GPIO
 
-RST = 23
-D_C = 24
+RST = 16
+D_C = 19
 
 SSD1306_SETCONTRAST = 0x81
 SSD1306_DISPLAYALLON_RESUME = 0xA4
@@ -56,7 +56,7 @@ class SSD1306():
         self.spi = spidev.SpiDev()
         #ls /dev/spi*
         #  /dev/spidev0.0 /dev/spidev0.1
-        self.spi.open(0, 0)
+        self.spi.open(0, 1)
 
         self.sendCmd(SSD1306_DISPLAYOFF)                    # 0xAE
         self.sendCmd(SSD1306_SETDISPLAYCLOCKDIV)            # 0xD5
